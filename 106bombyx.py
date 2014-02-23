@@ -12,7 +12,7 @@ k = sys.argv[1]
 k = float(k)
 
 while i != 100 :
-   y.insert(i, (k * float(x[i - 1])) * ((1000 - float(x[i - 1])) / 1000))
+   y.insert(i, (k * float(x[i - 1])) * ((1000 - float(x[i - 1])) / float(1000)))
    i = i + 1
 
 plt.plot(x,y)
