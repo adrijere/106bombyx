@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import matplotlib.pyplot as plt
 import numpy as np
 import sys
@@ -8,8 +10,11 @@ y = [ ]
 i = 0
 y.insert(i,10)
 i = i + 1
-k = sys.argv[1]
-k = float(k)
+try:
+   k = sys.argv[1]
+   k = float(k)
+except:
+   sys.exit("Usage : ./106bombyx <k>");
 
 while i != 100 :
    y.insert(i, (k * float(x[i - 1])) * ((1000 - float(x[i - 1])) / float(1000)))
